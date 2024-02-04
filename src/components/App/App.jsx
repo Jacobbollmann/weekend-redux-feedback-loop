@@ -1,6 +1,10 @@
 import React from 'react';
 import axios from 'axios';
 import './App.css';
+import {
+  HashRouter as Router,
+  Route,
+} from 'react-router-dom/cjs/react-router-dom.min';
 
 //Components
 import Feeling from '../Feeling/Feeling';
@@ -11,18 +15,28 @@ import Comments from '../Comments/Comments';
 function App() {
   return (
     <>
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Feedback!</h1>
-          <h4>Don't forget it!</h4>
-        </header>
-      </div>
-      <div>
-        <Feeling />
-        <Understanding />
-        <Support />
-        <Comments />
-      </div>
+      <Router>
+        <Route path="/">
+          <div className="App">
+            <header className="App-header">
+              <h1 className="App-title">Feedback!</h1>
+              <h4>Don't forget it!</h4>
+            </header>
+          </div>
+        </Route>
+        <Route path="/feeling">
+          <Feeling />
+        </Route>
+        <Route path="/understanding">
+          <Understanding />
+        </Route>
+        <Route path="/support">
+          <Support />
+        </Route>
+        <Route path="/comments">
+          <Comments />
+        </Route>
+      </Router>
     </>
   );
 }
