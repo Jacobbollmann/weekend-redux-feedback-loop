@@ -6,6 +6,7 @@ import './App.css';
 import Feeling from '../Feeling/Feeling';
 import Support from '../Support/Support';
 import Understanding from '../Understanding/Understanding';
+import Comments from '../Comments/Comments';
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
       </div>
       <div>
         <Feeling />
+        <Understanding />
+        <Support />
+        <Comments />
       </div>
     </>
   );
