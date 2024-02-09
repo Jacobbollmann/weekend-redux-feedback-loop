@@ -4,6 +4,7 @@ import './App.css';
 import {
   HashRouter as Router,
   Route,
+  Redirect,
 } from 'react-router-dom/cjs/react-router-dom.min';
 
 //Components
@@ -24,6 +25,7 @@ function App() {
               <h4>Don't forget it!</h4>
             </header>
           </div>
+          <Redirect to="/feeling" />
         </Route>
         <Route path="/feeling">
           <Feeling />

@@ -1,7 +1,5 @@
-function Review () {
-  return (
-    
-  );
+function Review() {
+  return;
 }
 
 export default Review;
