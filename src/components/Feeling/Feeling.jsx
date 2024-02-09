@@ -6,7 +6,7 @@ function Feeling() {
   const history = useHistory();
   const dispatch = useDispatch();
 
-  const [feelings, setFeelings] = useState('');
+  const [feelings, setFeelings] = useState(0);
 
   const saveFeeling = (event) => {
     setFeelings(event.target.value);

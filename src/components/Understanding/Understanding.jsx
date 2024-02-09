@@ -6,7 +6,7 @@ function Understanding() {
   const history = useHistory();
   const dispatch = useDispatch();
 
-  const [understanding, setUnderstanding] = useState('');
+  const [understanding, setUnderstanding] = useState(0);
 
   const saveUnderstanding = (event) => {
     setUnderstanding(event.target.value);
