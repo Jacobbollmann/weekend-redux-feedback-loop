@@ -1,6 +1,7 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 
+//Initial state
 const feedbackState = {
   feeling: 0,
   understanding: 0,
@@ -10,7 +11,7 @@ const feedbackState = {
 
 //Reducers will go here
 const feedback = (state = feedbackState, action) => {
-  if (action.type === 'UPDATE_FEELING') {
+  if (action.type === 'UPDATE_FEELINGS') {
     return { ...state, feeling: action.payload };
   }
   if (action.type === 'UPDATE_UNDERSTANDING') {

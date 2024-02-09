@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 function Feeling() {
   const [feelings, setFeelings] = useState('');
   const history = useHistory();
-  //const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   const saveFeeling = (event) => {
     setFeelings(event.target.value);
@@ -14,10 +14,10 @@ function Feeling() {
 
   const nextField = (event) => {
     event.preventDefault();
-    // dispatch({
-    //   type: 'FEELING_VALUE',
-    //   payload: feelings,
-    // });
+    dispatch({
+      type: 'UPDATE_FEELINGS',
+      payload: feelings,
+    });
     history.push('/understanding');
   };
 
