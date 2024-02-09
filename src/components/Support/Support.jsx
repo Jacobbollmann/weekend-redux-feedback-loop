@@ -1,8 +1,17 @@
+import { useHistory } from 'react-router-dom';
+
 function Support() {
+  const history = useHistory();
+
+  const nextField = (event) => {
+    event.preventDefault();
+    history.push('/comments');
+  };
+
   return (
     <div>
       <h3>How well are you being supported?</h3>
-      <form action="#">
+      <form onSubmit={nextField}>
         {/* <select name="understand" id="understand">
           <option value="5">5</option>
           <option value="4">4</option>
