@@ -1,8 +1,17 @@
+import { useHistory } from 'react-router-dom';
+
 function Understanding() {
+  const history = useHistory();
+
+  const nextField = (event) => {
+    event.preventDefault();
+    history.push('/support');
+  };
+
   return (
     <div>
       <h3>How well are you understanding the content?</h3>
-      <form>
+      <form onSubmit={nextField}>
         {/* <select name="understand" id="understand">
           <option value="5">5</option>
           <option value="4">4</option>
