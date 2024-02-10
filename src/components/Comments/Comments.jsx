@@ -25,8 +25,13 @@ function Comments() {
     <div>
       <h3>Any comments you want to leave?</h3>
       <form onSubmit={nextField}>
-        <input type="text" placeholder="Comments" onChange={updateComments} />
-        <input type="submit" value="Next" />
+        <input
+          type="text"
+          data-testid="input"
+          placeholder="Comments"
+          onChange={updateComments}
+        />
+        <input type="submit" value="Next" data-testid="next" />
       </form>
     </div>
   );

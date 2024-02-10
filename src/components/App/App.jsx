@@ -13,19 +13,20 @@ import Support from '../Support/Support';
 import Understanding from '../Understanding/Understanding';
 import Comments from '../Comments/Comments';
 import Review from '../Review/Review';
+import ThankYou from '../Thank-you/Thank-you';
 
 function App() {
   return (
     <>
       <Router>
         <Route path="/">
+          <Redirect to="/feeling" />
           <div className="App">
             <header className="App-header">
               <h1 className="App-title">Feedback!</h1>
               <h4>Don't forget it!</h4>
             </header>
           </div>
-          <Redirect to="/feeling" />
         </Route>
         <Route path="/feeling">
           <Feeling />
@@ -41,6 +42,9 @@ function App() {
         </Route>
         <Route path="/review">
           <Review />
+        </Route>
+        <Route path="/thank-you">
+          <ThankYou />
         </Route>
       </Router>
     </>

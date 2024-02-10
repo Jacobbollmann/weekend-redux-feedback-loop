@@ -6,7 +6,7 @@ function Review() {
   const feedback = useSelector((state) => state.feedback);
 
   const submitAndReturn = () => {
-    history.push('/feeling');
+    history.push('/thank-you');
   };
 
   return (
@@ -16,7 +16,9 @@ function Review() {
       <p>Understanding: {feedback.understanding}</p>
       <p>Support: {feedback.support}</p>
       <p>Comments: {feedback.comments}</p>
-      <button onClick={submitAndReturn}>Submit</button>
+      <button data-testid="next" onClick={submitAndReturn}>
+        Submit
+      </button>
     </div>
   );
 }

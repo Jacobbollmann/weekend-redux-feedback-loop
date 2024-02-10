@@ -27,12 +27,13 @@ function Understanding() {
       <form onSubmit={nextField}>
         <input
           type="number"
+          data-testid="input"
           step="1"
           min="1"
           max="5"
           onChange={saveUnderstanding}
         />
-        <input type="submit" value="Next" />
+        <input type="submit" value="Next" data-testid="next" />
       </form>
     </div>
   );

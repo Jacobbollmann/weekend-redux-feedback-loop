@@ -26,8 +26,15 @@ function Feeling() {
     <div>
       <h3>How are you feeling today?</h3>
       <form onSubmit={nextField}>
-        <input type="number" step="1" min="1" max="5" onChange={saveFeeling} />
-        <input type="submit" value="Next" />
+        <input
+          type="number"
+          data-testid="input"
+          step="1"
+          min="1"
+          max="5"
+          onChange={saveFeeling}
+        />
+        <input type="submit" value="Next" data-testid="next" />
       </form>
     </div>
   );
