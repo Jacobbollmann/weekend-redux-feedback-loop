@@ -1,7 +1,13 @@
 import { useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 function Review() {
+  const history = useHistory();
   const feedback = useSelector((state) => state.feedback);
+
+  const submitAndReturn = () => {
+    history.push('/feeling');
+  };
 
   return (
     <div>
@@ -10,7 +16,7 @@ function Review() {
       <p>Understanding: {feedback.understanding}</p>
       <p>Support: {feedback.support}</p>
       <p>Comments: {feedback.comments}</p>
-      <button>Submit</button>
+      <button onClick={submitAndReturn}>Submit</button>
     </div>
   );
 }
