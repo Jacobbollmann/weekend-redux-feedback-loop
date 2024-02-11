@@ -8,7 +8,7 @@ function ThankYou() {
   };
 
   return (
-    <div>
+    <div className="card">
       <h3>Thank You!!!</h3>
       <button data-testid="next" onClick={returnHome}>
         Leave New Feedback

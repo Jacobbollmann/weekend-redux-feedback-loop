@@ -22,7 +22,7 @@ function Comments() {
   };
 
   return (
-    <div>
+    <div className="card">
       <h3>Any comments you want to leave?</h3>
       <form onSubmit={nextField}>
         <input
@@ -30,8 +30,14 @@ function Comments() {
           data-testid="input"
           placeholder="Comments"
           onChange={updateComments}
+          className="input-field"
         />
-        <input type="submit" value="Next" data-testid="next" />
+        <input
+          type="submit"
+          value="Next"
+          data-testid="next"
+          className="button"
+        />
       </form>
     </div>
   );

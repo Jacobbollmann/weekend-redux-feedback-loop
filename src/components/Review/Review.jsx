@@ -31,7 +31,7 @@ function Review() {
   };
 
   return (
-    <div>
+    <div className="card">
       <h3>Review Your Feedback</h3>
       <p>Feelings: {feedback.feeling}</p>
       <p>Understanding: {feedback.understanding}</p>

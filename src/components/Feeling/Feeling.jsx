@@ -23,9 +23,10 @@ function Feeling() {
   };
 
   return (
-    <div>
+    <div className="card">
       <h3>How are you feeling today?</h3>
       <form onSubmit={nextField}>
+        <br />
         <input
           type="number"
           data-testid="input"
@@ -33,8 +34,15 @@ function Feeling() {
           min="1"
           max="5"
           onChange={saveFeeling}
+          placeholder="Range 1-5"
+          className="input-field"
         />
-        <input type="submit" value="Next" data-testid="next" />
+        <input
+          type="submit"
+          value="Next"
+          data-testid="next"
+          className="button"
+        />
       </form>
     </div>
   );

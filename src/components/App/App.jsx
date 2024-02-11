@@ -1,11 +1,11 @@
 import React from 'react';
-import axios from 'axios';
-import './App.css';
 import {
   HashRouter as Router,
   Route,
   Redirect,
 } from 'react-router-dom/cjs/react-router-dom.min';
+
+import './App.css';
 
 //Components
 import Feeling from '../Feeling/Feeling';
@@ -17,11 +17,11 @@ import ThankYou from '../Thank-you/Thank-you';
 
 function App() {
   return (
-    <>
+    <div className="App">
       <Router>
         <Route path="/">
           <Redirect to="/feeling" />
-          <div className="App">
+          <div>
             <header className="App-header">
               <h1 className="App-title">Feedback!</h1>
               <h4>Don't forget it!</h4>
@@ -47,7 +47,7 @@ function App() {
           <ThankYou />
         </Route>
       </Router>
-    </>
+    </div>
   );
 }
 
